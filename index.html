@@ -7,6 +7,13 @@
 		content="EpiScope: Optical Separation of Reflected Components by Rotation of Polygonal Mirror">
 
 	<title>EpiScope: Optical Separation of Reflected Components by Rotation of Polygonal Mirror</title>
+
+	<style>
+		h2 {
+			border-left: 8px solid green;
+			padding-left: 10px;
+		}
+	</style>
 </head>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -71,11 +78,12 @@
 		<br><br>
 		<h2>Results</h2>
 		<h3>Real Time Reflectance Components Separation</h3>
+		EpiScope can select the specific reflectance in real time. We can observe the selected reflection components directly without using the camera or display. The following movies are captured by a video camera through EpiScope.
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
 					<center>
-						<video width="100%" controls>
+						<video width="100%" controls muted loop playsinline>
 							<source src="movies/regular.mp4" type="video/mp4">
 						</video>
 						Regular
@@ -83,7 +91,7 @@
 				</div>
 				<div class="col-sm-4">
 					<center>
-						<video width="100%" controls>
+						<video width="100%" controls muted loop playsinline>
 							<source src="movies/direct.mp4" type="video/mp4">
 						</video>
 						Direct
@@ -91,10 +99,31 @@
 				</div>
 				<div class="col-sm-4">
 					<center>
-						<video width="100%" controls>
+						<video width="100%" controls muted loop playsinline>
 							<source src="movies/indirect.mp4" type="video/mp4">
 						</video>
 						Indirect
+					</center>
+				</div>
+			</div>
+		</div>
+
+		<h3>High-Speed Imaging for Dynamic Scene</h3>
+		Since each ray is optically synchronized, there is no synchronization error. We can increase the scanning speed by just increasing the rotation speed of the polygon mirror. Our prototype can scan up to 240 fps. 
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<center>
+						<img src="images/falldiscoball_scene_arrow.jpg" alt="" style="width:100%">
+						Scene (the disco balls are falling)
+					</center>
+				</div>
+				<div class="col-sm-8">
+					<center>
+						<video width="100%" controls muted loop playsinline>
+							<source src="movies/highspeed_240fps.mp4" type="video/mp4">
+						</video>
+						240 fps video of direct reflection component (8x slow motion)
 					</center>
 				</div>
 			</div>
@@ -143,11 +172,12 @@
 
 			<br><br>
 			<pre>
-@inproceedings{Maeda2021,
-	Author = {Ryota Maeda and Shinsaku Hiura},
-	booktitle = {SIGGRAPH Asia 2021 Techniacl Communications},
-	Title = {EpiScope: Optical Separation of Reflected Components by Rotation of Polygonal Mirror},
-	Year = {2021}
+@incollection{maeda2021episcope,
+	title={Episcope: Optical separation of reflected components by rotation of polygonal mirror},
+	author={Maeda, Ryota and Hiura, Shinsaku},
+	booktitle={SIGGRAPH Asia 2021 Technical Communications},
+	pages={1--4},
+	year={2021}
 }
 		</pre>
 
